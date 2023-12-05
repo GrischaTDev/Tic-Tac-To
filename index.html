@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Tic Tac To</title>
+    <title>Tic Tac Toe</title>
 </head>
+
 <body>
-    <h1>Tac Tac To</h1>
+    <h1>Tic Tac Toe</h1>
+    <div id="current-player" class="hidden"></div>
+
+    <button onclick="startGame()">Start</button>
+    <div id="ticTacToeBoard" class="board" style="display: none;"></div>
+
+
+    <!-- Modal Markup -->
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p id="winnerText"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="newGameBtn" onclick="resetGame()">Neues Spiel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="resetGame()">&times;</span>
+            <p id="winnerText"></p>
+            <button onclick="resetGame()">Neues Spiel</button>
+        </div>
+    </div>
+    
+
+
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
